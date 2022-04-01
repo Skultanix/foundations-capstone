@@ -1,3 +1,5 @@
+
+
 const baseURL = "https://f19-foundations-capstone-skul.herokuapp.com/" || "http://localhost:6969"
 
 //Start Elements
@@ -273,21 +275,12 @@ showMeBtn.addEventListener("click", () => {
 })
 
 //Feedback Functionality
-const feedbackInput = document.getElementById("feedback-data")
 const submitBtN = document.getElementById("sub-feedback")
-const feedForm = document.getElementById("feedback-form")
+const feedbackMeme = document.getElementById("feedback-meme")
 
 function submitFeedback() {
-    let newFeed = feedbackInput.value 
-    let feedbackBody = {
-        newFeed
-    }
-    axios.post("/api/submitFeedback/", feedbackBody)
-   .then((res) => {
-       let feedText = res.data
-       console.log(feedText)
-       
+    feedbackMeme.style.display = "block"
+    console.log("This thing is on.")
 
-   })
 }
-submitBtN.addEventListener("click",submitFeedback())
+submitBtN.addEventListener("click",submitFeedback)

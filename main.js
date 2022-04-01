@@ -21,11 +21,8 @@ app.get("/script", function (req,res){
     res.sendFile(path.join(__dirname,"controller.js"))
 })
 
-app.post("/api/submitFeedback/", (req,res) => {
-    console.log(req.body)
-    const {newFeed} = req.body
-    res.status(200).send(newFeed)
-})
+
+//function
 
 const port = process.env.PORT || 6969
 
