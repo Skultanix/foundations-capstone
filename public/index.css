@@ -1,0 +1,176 @@
+body {
+    display: block;
+    background-image: url("assets/og-background-muted.jpg");
+    
+    
+}
+#main {
+    text-align: center;
+    margin: auto;
+    width: auto;
+    max-width: 80%;
+    border: 5px solid white;
+    padding: 10 px;
+    background-color: rgb(0, 0, 0, 0.7);
+}
+
+#title {
+text-transform: uppercase;
+font-size: 110pt;
+margin-bottom: 0%;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+text-decoration: solid;
+color: white;
+text-shadow: 0 0 10px black, 0 0 10px black, 0 0 10px black;
+}
+#subtitle {
+    margin-top: 2%;
+    text-transform: uppercase;
+    font-size: 48pt;
+    font-family: 'Roboto', sans-serif;
+}
+
+#start-btn {
+    background-color: rgb(63, 63, 63);
+    border: none;
+    color: white;
+    padding: 20px 50px;
+    border-radius: 20%/50% ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 35pt;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10% ;
+    cursor: pointer;
+}
+
+#start-btn:active {
+    background-color: black;
+    transform: translateY(4px);
+}
+
+div.results {
+text-align: center;
+margin: auto;
+width: auto;
+max-width: 80%;
+background-color: rgb(122, 122, 122, 0.7);
+border: 5px solid white;
+padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 45pt;
+    margin-bottom: 3%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: solid;
+}
+
+h4 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20pt;
+    font-weight: lighter;
+    color: rgb(187, 187, 197);
+}
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25pt;
+}
+p {
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+}
+#results-feedback {
+    text-align: center;
+    color: antiquewhite;
+}
+#go-to-feedback {
+    background-color: rgb(63, 63, 63);
+    border: none;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 20%/50% ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15pt;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10% ;
+    cursor: pointer; 
+}
+
+#go-to-feedback:active {
+    background-color: black;
+    transform: translateY(4px);
+}
+
+#results-feedback-go {
+    text-align: center;
+    margin: auto;
+    width: auto;
+}
+
+img.results-cover {
+    border-radius: 20%;
+    max-width: 500px;
+    max-height: auto;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 35pt;
+    margin-left: 10%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: solid;
+    color: white;
+    text-shadow: 0 0 10px black, 0 0 10px black, 0 0 10px black;
+}
+
+#feedback-form {
+    text-align: center;
+    margin: auto;
+    width: auto;
+    max-width: 80%;
+    background-color: rgb(122, 122, 122, 0.7);
+    border: 5px solid white;
+    padding: 10px;
+}
+
+#feedback-meme {
+    position: relative;
+}
+
+#text-high {
+    position: absolute;
+    text-align: center;
+    top: 13%;
+    left: 25%;
+}
+
+#text-low {
+    position: absolute;
+    text-align: center;
+    bottom: 18%;
+    left: 25%;
+}
+
+h5 {
+    font-size: 35pt;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: solid;
+    color: white;
+    text-shadow: 0 0 10px black, 0 0 10px black, 0 0 10px black;    
+}
+
+#form-label {
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+}
+

@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="stylesheet" href="/styles"> -->
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet"> 
     <title>Results</title>
 </head>
 <body>
     <h2>Results:</h2>
-    <h1>You Are</h1>
+    <h1 id="results-gen">You Are...</h1>
     <div class="results" id="tranq" hidden>
         <h1>The Tranquil</h1>
         <img src="" class="results-cover">
@@ -87,9 +94,9 @@
         <p>The savage is the most brutal of realists and have no compunctions about articulating the reality in front of them regardless of the consequences. This willingness to accept life as it is without the rose-colored lenses of idealism makes savages unbelievably resilient and natural opportunists. When life gives the savage lemons, savages are generally torn between eating them raw or trying to squeeze them in life’s eyes.  </p>
         <p>Savages tend to have difficulties in social situations, particularly with new people who don’t appreciate their brutal honesty and the leveraging of every opportunity to roast people that is presented to them. Savages are pretty natural meme-smiths, unfortunately they lack a great filter for the nuance and politeness that govern in-person interactions, which either serves them well in their career, or horribly cripples them. Such is the law of the jungle.</p>
     </div>
-    <div class="results" id="">
+    <div class="results" id="karen" hidden>
         <h1>The Karen</h1>
-        <img src="" class="results-cover">
+        <img src="/public/assets/Karen.jpg" class="results-cover">
         <h4>"Deep down, you know that you deserve to be punished. Don't you, Mr. Potter?"</h4>
         <h4>--Dolores Umbridge</h4>
         <h3>Profile Summary</h3>
@@ -97,8 +104,13 @@
         <p>Karens recognize the potency of their influence and esteem, and therefore seek to involve themselves in the lives of those around them. This is a tremendous act of self-sacrifice and should be regarded as such. Karens are humble and recognize they’re not the most eminent authority on all areas. After all one must concede to an expert in any given area, unless what they’re saying contradicts the Karen. In that case they’re nothing more than a rube and a charlatan. Who cares about their certifications and experience? Their opinion is contradictory, so it is wrong.</p>
         <p>Karens cannot abide people who selfishly want to chart their own course in life, or believe in nasty things like privacy, stoicism, and worst of all, rolling with the punches and not worrying at all about worries of the world that don’t affect them directly.  </p>
     </div>
+    <div id="results-feedback-go">
+        <p id="results-feedback">Unhappy with your results? Click here to share your opinion:</p>
+        <button id="go-to-feedback">Share Feedback</button>
+    </div>
 
-    <p>Unhappy with your results? Click here to share your opinion:</p>
-    <button id="go-to-feedback">Share Feedback</button>
 </body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!-- <script src="/script"></script> -->
+<script src="../server/controller.js"></script>
 </html>
