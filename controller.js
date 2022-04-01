@@ -1,5 +1,28 @@
 const baseURL = "https://f19-foundations-capstone-skul.herokuapp.com/" || "http://localhost:6969"
 
+//Start Elements
+const startState = document.getElementById("main")
+const toQuiz = document.getElementById("start-btn")
+const theQuiz = document.getElementById("quiz")
+
+//Start div Functionality
+function quizTime() {
+    startState.style.display = "none"
+    theQuiz.style.display = "block"
+}
+toQuiz.addEventListener("click", quizTime)
+
+//Navigate to Feedback Section
+const toFeedbackSection = document.getElementById("results-feedback-go")
+const toFeedback = document.getElementById("go-to-feedback")
+const feedbackPage = document.getElementById("user-feedback")
+function feedBackTime() {
+    shown.style.display = "none"
+    feedbackPage.style.display= "block"
+}
+
+toFeedback.addEventListener("click",feedBackTime)
+
 //Personal Variables
 let mal = 0
 let vibe = 0
@@ -7,8 +30,6 @@ let malVibeNeut = 0
 let noChill = 0
 let chill = 0
 let neutChill = 0
-
-
 
 //Quiz Progress Bar
 const progArea = document.getElementById("progress")
@@ -257,37 +278,16 @@ const submitBtN = document.getElementById("sub-feedback")
 const feedForm = document.getElementById("feedback-form")
 
 function submitFeedback() {
-    let newFeed = feedbackInput.ariaValueMax
+    let newFeed = feedbackInput.value 
     let feedbackBody = {
         newFeed
     }
-    axios
-    .post("http://localhost:6969/api/submitFeedback/", feedbackBody)
-   //  .post("/api/submitFeedback/", feedbackBody)
+    axios.post("/api/submitFeedback/", feedbackBody)
    .then((res) => {
        let feedText = res.data
-       function toSpongeBobCase(str) {
-           let strArr = str.split("")
-           let spongeArr = []
-           let counter = 0
-           for(i = 0; i < strArr.length; i++)
-             if(strArr[i] === "'" || strArr[i] === "," || strArr[i] === "." || strArr[i] === " ") {
-               counter++
-               spongeArr.push(strArr[i])
-             }
-             else if((i + counter) % 2 === 0) {
-               spongeArr.push(strArr[i].toLowerCase())
-             } else {
-               spongeArr.push(strArr[i].toUpperCase())
-             }
-           let spongeStr = spongeArr.join("")
-           return spongeStr
-         }
-       let spongeFeed = toSpongeBobCase(feedText)
-       let newMeme = document.createElement("h2")
-       newMeme.innerText = `${spongeFeed}`
-       console.log(spongeFeed)
-       document.body.insertBefore(newMeme, feedForm)
+       console.log(feedText)
+       
+
    })
 }
-submitBtN.addEventListener("click",submitFeedback)
+submitBtN.addEventListener("click",submitFeedback())
