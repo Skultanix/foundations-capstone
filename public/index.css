@@ -174,3 +174,51 @@ h5 {
     font-size: 15pt;
 }
 
+#progress {
+    text-align: center;
+    margin: auto;
+    width: auto;
+    max-width: 80%;
+    background-color: rgb(122, 122, 122, 0.7);
+    border: 5px solid white;
+    padding: 10px;  
+}
+ div.scenario {
+    text-align: left;
+    margin: auto;
+    width: auto;
+    max-width: 80%;
+    background-color: rgb(122, 122, 122, 0.7);
+    border: 5px solid white;
+    padding: 10px;
+ }
+
+ #show-me {
+    text-align: center;
+    margin: auto;
+    width: auto;
+    max-width: 80%;
+    border: 5px solid white;
+    padding: 10 px;
+    background-color: rgb(122, 122, 122, 0.7);
+ }
+
+ #show-me-btn {
+    background-color: rgb(63, 63, 63);
+    border: none;
+    color: white;
+    padding: 15px 37px;
+    border-radius: 20%/50% ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20pt;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10% ;
+    cursor: pointer;
+}
+
+#show-me-btn:active {
+    background-color: black;
+    transform: translateY(4px);
+}
