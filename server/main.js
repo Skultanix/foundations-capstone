@@ -13,6 +13,11 @@ app.get("/script", function (req,res){
     res.sendFile(path.join(__dirname,"controller.js"))
 })
 
+app.post(`/api/submitFeedback`, (req,res) => {
+    const {newFeed} = req.body
+    res.status(200).send(newFeed)
+})
+
 const port = process.env.PORT || 6969
 
 app.listen(port, () => {

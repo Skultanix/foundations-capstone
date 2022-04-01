@@ -56,27 +56,21 @@ const karen = document.getElementById("karen")
 //Quiz Scoring Functions
 function addMal() {
     mal = mal + 1
-    console.log(mal)
 }
 function addVibe() {
     vibe = vibe + 1
-    console.log(vibe)
 }
 function addNoChill() {
     noChill = noChill + 1
-    console.log(noChill)
 }
 function addChill() {
     chill = chill + 1
-    console.log(chill)
 }
 function addMalVibeNeut() {
     malVibeNeut = malVibeNeut + 1
-    console.log(addMalVibeNeut)
 }
 function addNeutChill() {
     neutChill = neutChill + 1
-    console.log(addNeutChill)
 }
 
 //Quiz Progression
@@ -207,31 +201,23 @@ const shown = document.getElementById("shown")
 function vibeChooser() {
     if(mal >= 2){
         vibeAlign = "malevolent"
-        console.log(vibeAlign)
     } else if(malVibeNeut >= 2){
         vibeAlign = "neutral"
-        console.log(vibeAlign)
     } else if(vibe >= 2) {
         vibeAlign = "vibing"
-        console.log(vibeAlign)
     } else {
         vibeAlign = "neutral"
-        console.log(vibeAlign)
     }
 }
 function chillChooser() {
     if(noChill >= 2) {
         chillAlign = "no chill"
-        console.log(chillAlign)
     } else if(neutChill >= 2) {
         chillAlign = "neutral"
-        console.log(chillAlign)
     } else if(chill >= 2) {
         chillAlign = "chill"
-        console.log(chillAlign)
     } else {
         chillAlign = "neutral"
-        console.log(chillAlign)
     }
 }
 function archetypeChooser() {
@@ -264,3 +250,44 @@ showMeBtn.addEventListener("click", () => {
     chillChooser()
     archetypeChooser()
 })
+
+//Feedback Functionality
+const feedbackInput = document.getElementById("feedback-data")
+const submitBtN = document.getElementById("sub-feedback")
+const feedForm = document.getElementById("feedback-form")
+
+function submitFeedback() {
+    let newFeed = feedbackInput.ariaValueMax
+    let feedbackBody = {
+        newFeed
+    }
+    axios
+    .post("http://localhost:6969/api/submitFeedback/", feedbackBody)
+   //  .post("/api/submitFeedback/", feedbackBody)
+   .then((res) => {
+       let feedText = res.data
+       function toSpongeBobCase(str) {
+           let strArr = str.split("")
+           let spongeArr = []
+           let counter = 0
+           for(i = 0; i < strArr.length; i++)
+             if(strArr[i] === "'" || strArr[i] === "," || strArr[i] === "." || strArr[i] === " ") {
+               counter++
+               spongeArr.push(strArr[i])
+             }
+             else if((i + counter) % 2 === 0) {
+               spongeArr.push(strArr[i].toLowerCase())
+             } else {
+               spongeArr.push(strArr[i].toUpperCase())
+             }
+           let spongeStr = spongeArr.join("")
+           return spongeStr
+         }
+       let spongeFeed = toSpongeBobCase(feedText)
+       let newMeme = document.createElement("h2")
+       newMeme.innerText = `${spongeFeed}`
+       console.log(spongeFeed)
+       document.body.insertBefore(newMeme, feedForm)
+   })
+}
+submitBtN.addEventListener("click",submitFeedback)
