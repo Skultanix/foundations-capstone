@@ -8,7 +8,7 @@ app.use(express.json())
 
 ///Endpoint setup
 app.get("/", function (req,res){
-    res.sendFile(path.join,"../public/index.html")
+    res.sendFile(path.join,"/public/index.html")
 })
 
 app.get("/script", function (req,res){
