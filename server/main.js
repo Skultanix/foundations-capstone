@@ -7,7 +7,9 @@ app.use(cors())
 app.use(express.json())
 
 ///Endpoint setup
-app.use(express.static(path.join(__dirname, "../public")))
+app.get("/", function (req,res){
+    res.sendFile(path.join,"../public/landing_page.html")
+})
 
 app.get("/script", function (req,res){
     res.sendFile(path.join(__dirname,"controller.js"))
